@@ -1,3 +1,6 @@
+const { catAndTo, mkdir } = require("../util/io");
+const { generateLog } = require("../util/consoles");
+const PATH = require("../content/path");
 /**
  * 置き換え文字列
  */
@@ -10,17 +13,24 @@ const createComponent = (name, component, func) => {
     console.error(
       "モジュール名が不正です。 atoms molecules organisms templates pages の中から選択してください"
     );
-    return;
+    return false;
   }
-  cat(func ? FUNC : CLASS)
-    .stdout.replace(componentName, name)
-    .to(`${output}/${name}/index.jsx`);
-  cat(SASS)
-    .stdout.replace(componentName, name)
-    .to(`${output}/${name}/index.sass`);
-  console.log(`component: ${component}`);
-  console.log(`name: ${name}.jsx`);
+  const words = [{ regex: componentName, word: name }];
+  const componentType = func ? FUNC : CLASS;
+  const BASE_PATH = `${output}/${name}/`;
+  mkdir(BASE_PATH);
+
+  catAndTo(componentType, `${BASE_PATH}/index.jsx`, words);
+  catAndTo(SASS, `${BASE_PATH}/index.sass`, words);
+
+  `export { default as ${name} } from "./${name}";\n`.toEnd(`${output}/index.js`);
+
+  generateLog(`COMPONENT : ${component}`);
+  generateLog(`NAME : ${name}`);
   console.log("= = = = 作成完了 = = = =");
+
+  return true;
 };
+
 
 module.exports = createComponent;
