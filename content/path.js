@@ -1,3 +1,4 @@
+const path = require("path");
 const PATH = {
   TEMPLATE_PATH: {
     FUNC: "content/component/func.js.tmpl",
@@ -14,10 +15,19 @@ const PATH = {
     templates: "src/js/component/templates",
     pages: "src/js/pages"
   },
-  INIT_PATH: {
-    sass: "content/initial/sass",
-    js: "content/initial/js",
-    store: "content/initial/store",
-  }
+  INIT_PATH: [
+    {
+      input: path.resolve(__dirname, "initial/js"),
+      output: "src"
+    },
+    {
+      input: path.resolve(__dirname, "initial/store"),
+      output: "src/js"
+    },
+    {
+      input: path.resolve(__dirname, "initial/sass"),
+      output: "src"
+    }
+  ]
 };
 module.exports = PATH;

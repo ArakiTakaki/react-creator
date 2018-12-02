@@ -9,7 +9,7 @@ prompt = require("co-prompt");
 co = require("co");
 program
   .version("0.0.1", "-v, --version")
-  .option("-i, --init", "初期化を行う")
+  .option("-i, --init", "初期化を行うコマンド")
   .option(
     "-c, --component <component>",
     "atoms molecules organisms templates pages",
