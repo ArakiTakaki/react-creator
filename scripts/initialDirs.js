@@ -1,9 +1,9 @@
 require("colors");
-const { mkdir, generate } = require("../util/io");
+const { mkdir, cp } = require("../util/io");
 const PATH = require("../content/path");
 
 const initialDirs = () => {
-  const { MODULE_PATH } = PATH;
+  const { MODULE_PATH, INIT_PATH } = PATH;
   const {
     container,
     atoms,
@@ -14,13 +14,14 @@ const initialDirs = () => {
   } = MODULE_PATH;
 
   console.log("============ MAKE FILES ============\n".bold);
-  mkdir(`${atoms}/sass`);
-  mkdir(`${molecules}/sass`);
-  mkdir(`${organisms}/sass`);
-  mkdir(`${templates}/sass`);
-  mkdir(`${pages}/sass`);
+  mkdir(`${atoms}`);
+  mkdir(`${molecules}`);
+  mkdir(`${organisms}`);
+  mkdir(`${templates}`);
+  mkdir(`${pages}`);
   mkdir("src/sass");
   mkdir(container);
+  for (let value of INIT_PATH) cp(value.input, value.output);
   console.log("\n============ MAKE FILES ============".bold);
 };
 
