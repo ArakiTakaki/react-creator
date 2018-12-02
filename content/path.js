@@ -14,37 +14,10 @@ const PATH = {
     templates: "src/js/component/templates",
     pages: "src/js/pages"
   },
-  INIT_PATH: [
-    {
-      // container/Root.jsx
-      TEMPLATE: "content/initial/component/container.js.tmpl",
-      OUT: "src/js/container/Root.jsx"
-    },
-    {
-      //entry
-      TEMPLATE: "content/initial/component/index.js.tmpl",
-      OUT: "src/js/index.jsx"
-    },
-    {
-      //base.sass
-      TEMPLATE: "content/initial/sass/base.sass.tmpl",
-      OUT: "src/sass/base.sass"
-    },
-    {
-      //_valiables.sass
-      TEMPLATE: "content/initial/sass/_valiables.sass.tmpl",
-      OUT: "src/sass/_valiables.sass"
-    },
-    {
-      //_mixin.sass
-      TEMPLATE: "content/initial/sass/_mixin.sass.tmpl",
-      OUT: "src/sass/_mixin.sass"
-    },
-    {
-      //_aggregation.sass
-      TEMPLATE: "content/initial/sass/_aggregation.sass.tmpl",
-      OUT: "src/sass/_aggregation.sass"
-    }
-  ]
+  INIT_PATH: {
+    sass: "content/initial/sass",
+    js: "content/initial/js",
+    store: "content/initial/store",
+  }
 };
 module.exports = PATH;
