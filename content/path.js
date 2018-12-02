@@ -17,32 +17,32 @@ const PATH = {
   INIT_PATH: [
     {
       // container/Root.jsx
-      TEMPLATE: "content/initial/container.js.tmpl",
+      TEMPLATE: "content/initial/component/container.js.tmpl",
       OUT: "src/js/container/Root.jsx"
     },
     {
       //entry
-      TEMPLATE: "content/initial/index.js.tmpl",
+      TEMPLATE: "content/initial/component/index.js.tmpl",
       OUT: "src/js/index.jsx"
     },
     {
       //base.sass
-      TEMPLATE: "content/initial/base.sass.tmpl",
+      TEMPLATE: "content/initial/sass/base.sass.tmpl",
       OUT: "src/sass/base.sass"
     },
     {
       //_valiables.sass
-      TEMPLATE: "content/initial/_valiables.sass.tmpl",
+      TEMPLATE: "content/initial/sass/_valiables.sass.tmpl",
       OUT: "src/sass/_valiables.sass"
     },
     {
       //_mixin.sass
-      TEMPLATE: "content/initial/_mixin.sass.tmpl",
+      TEMPLATE: "content/initial/sass/_mixin.sass.tmpl",
       OUT: "src/sass/_mixin.sass"
     },
     {
       //_aggregation.sass
-      TEMPLATE: "content/initial/_aggregation.sass.tmpl",
+      TEMPLATE: "content/initial/sass/_aggregation.sass.tmpl",
       OUT: "src/sass/_aggregation.sass"
     }
   ]
