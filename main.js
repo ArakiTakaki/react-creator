@@ -20,13 +20,11 @@ program
     "ファンクションコンポーネントとして作成 デフォルトではクラスを作成する",
     false
   )
-  .option("-s, --store <store>", "Storeを作成する")
   .option("-a, --action <action>", "Actionを追加する")
   .option("-r, --reducer", "Actionsを元にReducersを追加する (-a限定)")
   .option("--comment [value]", "コメントを追加する (-a限定)", null)
   .action(env => {
     const { component, comment, func, store, action, reducer, init } = program;
-    console.log(comment);
     if (init) initialDirs();
     if (component !== "") createComponent(env, component, func);
   });
