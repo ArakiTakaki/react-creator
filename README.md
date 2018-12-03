@@ -4,11 +4,13 @@ Reactにおけるコンポーネントや、アクションを追加する際に
 
 アトミックデザインに準拠しております。
 
+[ご意見ご要望はこちら](https://github.com/ArakiTakaki/react-creator/issues)
+
 ## install
 
-YARN : `yarn add --dev ArakiTakaki/react-creator.git`
+yarn : `yarn add --dev ArakiTakaki/react-creator.git`
 
-NPM : `npm install -save--dev ArakiTakaki/react-creator.git`
+npm : `npm install -save--dev ArakiTakaki/react-creator.git`
 
 ## DEMO
 
@@ -63,3 +65,11 @@ src/
 - @babel/plugin-proposal-decorators
   - legacyモード
 - @babel/plugin-transform-runtime
+
+## 作成理由
+
+- component定義の手間を削減
+    - コマンド一つで`sass`+`react.Component`を作成できる。
+    - functionにも対応
+- actionsの手間を削減
+    - こちらもコマンド一つで`actions`に追記が可能
