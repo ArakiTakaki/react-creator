@@ -1,9 +1,9 @@
 const path = require("path");
 const PATH = {
   TEMPLATE_PATH: {
-    FUNC: path.resolve("component/func.js.tmpl"),
-    CLASS: path.resolve("component/class.js.tmpl"),
-    STORE_CLASS: path.resolve("component/class.js.store.tmpl"),
+    FUNC: path.resolve(__dirname, "component/func.js.tmpl"),
+    CLASS: path.resolve(__dirname, "component/class.js.tmpl"),
+    STORE_CLASS: path.resolve(__dirname, "component/class.js.store.tmpl"),
     SASS: path.resolve(__dirname, "component/component.sass.tmpl"),
     ACTION: path.resolve(__dirname, "store/actions.js.tmpl"),
     COMMENT: path.resolve(__dirname, "util/comment.js.tmpl")
