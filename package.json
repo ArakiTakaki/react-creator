@@ -1,11 +1,14 @@
 {
-  "name": "react-create-component",
-  "version": "1.0.0",
+  "name": "react-creator",
+  "version": "0.0.3",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
     "start": "node main.js",
     "test": "cross-env MODE=test node main.js"
+  },
+  "bin": {
+    "mycli": "./index.js"
   },
   "dependencies": {
     "change-case": "^3.0.2",
