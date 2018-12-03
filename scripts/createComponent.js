@@ -17,7 +17,7 @@ const createComponent = (name, component, func) => {
     );
     return false;
   }
-  const words = [{ regex: componentName, word: nmae }];
+  const words = [{ regex: componentName, word: name }];
   const componentType = func ? FUNC : CLASS;
   const BASE_PATH = `${output}/${name}/`;
   mkdir(BASE_PATH);

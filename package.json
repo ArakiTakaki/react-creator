@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node main.js",
+    "start": "node index.js",
     "test": "cross-env MODE=test node main.js"
   },
   "bin": {
