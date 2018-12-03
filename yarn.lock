@@ -2926,6 +2926,18 @@ rc@^1.2.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
+react-creator@ArakiTakaki/react-creator.git:
+  version "0.0.3"
+  resolved "https://codeload.github.com/ArakiTakaki/react-creator/tar.gz/89201ed826100614c17b3c7a81ad10f621a5321f"
+  dependencies:
+    change-case "^3.0.2"
+    co "^4.6.0"
+    co-prompt "^1.0.0"
+    colors "^1.3.2"
+    commander "^2.19.0"
+    cross-env "^5.2.0"
+    shelljs "^0.8.3"
+
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/read-pkg-up/-/read-pkg-up-1.0.1.tgz#9d63c13276c065918d57f002a57f40a1b643fb02"
