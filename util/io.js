@@ -37,12 +37,19 @@ module.exports = {
    * @param {array[object]} replaceWords
    * @param {regex} replaceWords[n].regex
    * @param {string} replaceWords[n].word
+   * @param {bool} end defaultだとfalse
    */
-  catAndTo(inputPath, outputPath, replaceWords) {
+  catAndTo(inputPath, outputPath, replaceWords, end) {
+    end = end | false;
     let value = shell.cat(inputPath).stdout;
     for (let rw of replaceWords) {
       value = value.replace(rw.regex, rw.word);
     }
+    if (end) {
+      value.toEnd(outputPath);
+      return true;
+    }
     value.to(outputPath);
+    return true;
   }
 };
