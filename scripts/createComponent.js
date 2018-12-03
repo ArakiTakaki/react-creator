@@ -1,5 +1,6 @@
 const { catAndTo, mkdir } = require("../util/io");
 const { generateLog } = require("../util/consoles");
+const changeCase = require("change-case");
 const PATH = require("../content/path");
 /**
  * 置き換え文字列
@@ -15,7 +16,7 @@ const createComponent = (name, component, func) => {
     );
     return false;
   }
-  const words = [{ regex: componentName, word: name }];
+  const words = [{ regex: componentName, word: changeCase.pascalCase(name) }];
   const componentType = func ? FUNC : CLASS;
   const BASE_PATH = `${output}/${name}/`;
   mkdir(BASE_PATH);

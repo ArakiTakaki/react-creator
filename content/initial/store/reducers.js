@@ -4,9 +4,9 @@ const reducer = (state, action) => {
   const { payload } = action;
   switch (action.type) {
     case Actions.INCREMENT:
-      return { ...state, num: stat.num++ };
+      return { ...state, num: state.num++ };
     case Actions.DECREMENT:
-      return { ...state, num: stat.num-- };
+      return { ...state, num: state.num-- };
     default:
       return state;
   }
