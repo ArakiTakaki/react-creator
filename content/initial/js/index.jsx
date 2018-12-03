@@ -1,9 +1,9 @@
-import "scss/base.scss";
+import "../sass/base.sass";
 import ReactDOM from "react-dom";
 import React from "react";
 import { Provider } from "react-redux";
 
-import Root from "./containers/Root";
+import Root from "./container/Root";
 import store from "./store/configreStore";
 
 ReactDOM.render(

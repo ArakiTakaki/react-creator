@@ -8,4 +8,4 @@ export const increment = () => ({ type: INCREMENT });
  * Storeの数値を減算するアクション
  */
 export const DECREMENT = "DECREMENT";
-export const increment = () => ({ type: DECREMENT });
+export const decrement = () => ({ type: DECREMENT });
