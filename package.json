@@ -8,7 +8,7 @@
     "test": "cross-env MODE=test node main.js"
   },
   "bin": {
-    "mycli": "./index.js"
+    "react-creator": "./index.js"
   },
   "dependencies": {
     "change-case": "^3.0.2",
