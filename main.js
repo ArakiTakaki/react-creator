@@ -2,6 +2,7 @@
 require("shelljs/global");
 const initialDirs = require("./scripts/initialDirs");
 const createComponent = require("./scripts/createComponent");
+const createAction = require("./scripts/createAction");
 const PATH = require("./content/path");
 
 program = require("commander");
@@ -25,8 +26,18 @@ program
   .option("--comment [value]", "コメントを追加する (-a限定)", null)
   .action(env => {
     const { component, comment, func, store, action, reducer, init } = program;
-    if (init) initialDirs();
-    if (component !== "") createComponent(env, component, func);
+    if (init) {
+      initialDirs();
+      return;
+    }
+    if (component !== "") {
+      createComponent(env, component, func);
+      return;
+    }
+    if (action) {
+      createAction(action, comment);
+      return;
+    }
   });
 
 program.parse(process.argv);
