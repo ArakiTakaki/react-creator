@@ -8,6 +8,7 @@ const PATH = require("../content/path");
 const componentName = /\{\{ComponentName\}\}/g;
 
 const createComponent = (name, component, func) => {
+  name = changeCase.pascalCase(name);
   const { CLASS, FUNC, SASS } = PATH.TEMPLATE_PATH;
   const output = PATH.MODULE_PATH[component];
   if (!output) {
@@ -16,7 +17,7 @@ const createComponent = (name, component, func) => {
     );
     return false;
   }
-  const words = [{ regex: componentName, word: changeCase.pascalCase(name) }];
+  const words = [{ regex: componentName, word: nmae }];
   const componentType = func ? FUNC : CLASS;
   const BASE_PATH = `${output}/${name}/`;
   mkdir(BASE_PATH);
