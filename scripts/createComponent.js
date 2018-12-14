@@ -9,7 +9,7 @@ const componentName = /\{\{ComponentName\}\}/g;
 
 const createComponent = (name, component, func) => {
   name = changeCase.pascalCase(name);
-  const { CLASS, FUNC, SASS } = PATH.TEMPLATE_PATH;
+  const { CLASS, FUNC, SASS, TEST } = PATH.TEMPLATE_PATH;
   const output = PATH.MODULE_PATH[component];
   if (!output) {
     console.error(
@@ -22,10 +22,11 @@ const createComponent = (name, component, func) => {
   const BASE_PATH = `${output}/${name}/`;
   mkdir(BASE_PATH);
 
-  catAndTo(componentType, `${BASE_PATH}/index.jsx`, words);
-  catAndTo(SASS, `${BASE_PATH}/index.sass`, words);
+  catAndTo(componentType, `${BASE_PATH}/${name}Component.jsx`, words);
+  catAndTo(SASS, `${BASE_PATH}/${name}Style.sass`, words);
+  catAndTo(TEST, `${BASE_PATH}/${name}.test.jsx`, words);
 
-  `export { default as ${name} } from "./${name}/";\n`.toEnd(`${output}/index.js`);
+  `export { default as ${name} } from "./${name}/${name}Component";\n`.toEnd(`${output}/index.js`);
 
   generateLog(`COMPONENT : ${component}`);
   generateLog(`NAME : ${name}`);

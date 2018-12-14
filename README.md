@@ -56,6 +56,12 @@ src/
 - sass
 - webpack
 - reset-css
+- react
+- テスト系ライブラリ
+    - jest
+    - enzyme
+    - enzyme-adapter-react-16
+    - react-test-renderer
 
 ## babel
 
