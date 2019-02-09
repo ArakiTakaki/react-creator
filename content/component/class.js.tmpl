@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import styles from "./index.sass";
+import styles from "./{{ComponentName}}Style.sass";
 
 class {{ComponentName}} extends React.Component {
   render() {
@@ -11,6 +11,7 @@ class {{ComponentName}} extends React.Component {
 
 {{ComponentName}}.propTypes = {
   //TODO props: PropTypes.string.isRequired
+  children: PropTypes.any
 };
 
 export default {{ComponentName}};
