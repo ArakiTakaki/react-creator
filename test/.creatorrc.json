@@ -1,0 +1,5 @@
+{
+  "component": "./src/js/components",
+  "pages": "./src/js/pages",
+  "container": "./src/js/pages"
+}

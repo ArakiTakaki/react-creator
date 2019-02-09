@@ -21,7 +21,6 @@ program
     "ファンクションコンポーネントとして作成 デフォルトではクラスを作成する",
     false
   )
-  .option("-a, --action <action>", "Actionを追加する")
   .option("-r, --reducer", "Actionsを元にReducersを追加する (-a限定)")
   .option("--comment [value]", "コメントを追加する (-a限定)", null)
   .action(env => {
@@ -32,10 +31,6 @@ program
     }
     if (component !== "") {
       createComponent(env, component, func);
-      return;
-    }
-    if (action) {
-      createAction(action, comment);
       return;
     }
   });

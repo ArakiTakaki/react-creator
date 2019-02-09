@@ -1,0 +1,13 @@
+ComponentName
+StyleExtension -> 共通設定項目
+
+Componentsの位置
+pagesの位置
+contentsの位置は
+.arakirc
+などに格納できたほうが良い気がする。
+
+ディレクトリの切り方
+ComponentName/index.jsx
+             /Style.[StyleExtension]
+             /index.test.jsx的な(必要ある？)
