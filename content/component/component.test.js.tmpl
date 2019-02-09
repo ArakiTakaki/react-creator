@@ -1,12 +1,11 @@
-import styles from './';
 import React from 'react';
 import {{ComponentName}} from './{{ComponentName}}Component';
 import renderer from 'react-test-renderer';
-import { shallow } from 'enzyme';
-
-import { configure } from 'enzyme';
-import Adapter from 'enzyme-adapter-react-16';
-configure({ adapter: new Adapter() });
+// react16.8で使用できないので一旦保留
+// import { shallow } from 'enzyme';
+// import { configure } from 'enzyme';
+// import Adapter from 'enzyme-adapter-react-16';
+// configure({ adapter: new Adapter() });
 
 // snapshot test
 test('{{ComponentName}} SnapShot', () => {
@@ -17,8 +16,10 @@ test('{{ComponentName}} SnapShot', () => {
 });
 
 
+/*
 test('{{ComponentName}} enzyme', () => {
   const wrapper = shallow(<{{ComponentName}} />);
   // TODO コンポーネントのテストを記載する
   // expect(wrapper.text()).toBe('InputType:test');
 });
+*/
