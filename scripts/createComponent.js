@@ -24,9 +24,9 @@ const createComponent = (name, component, func) => {
 
   catAndTo(componentType, `${BASE_PATH}/${name}Component.jsx`, words);
   catAndTo(SASS, `${BASE_PATH}/${name}Style.sass`, words);
-  catAndTo(TEST, `${BASE_PATH}/${name}.test.jsx`, words);
+  catAndTo(TEST, `${BASE_PATH}/${name}Component.test.jsx`, words);
 
-  `export { default as ${name} } from "./${name}/${name}Component";\n`.toEnd(`${output}/index.js`);
+  `export { default as ${name} } from './${name}/${name}Component';\n`.toEnd(`${output}/index.js`);
 
   generateLog(`COMPONENT : ${component}`);
   generateLog(`NAME : ${name}`);
